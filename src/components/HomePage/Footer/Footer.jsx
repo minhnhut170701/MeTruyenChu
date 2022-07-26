@@ -3,7 +3,7 @@ import {Box, List, ListItem, Flex, Image, Text} from "@chakra-ui/react"
 const Footer = () => {
   return (
     <Box w="100%" mt='40px' bg="#f8f8f8" borderTop='1px' borderColor='#e7e7e7' p='6'>
-        <Box w='1223px' mx='auto'>
+        <Box w={{md: '1223px', base: '100%'}} mx='auto'>
             <Flex alignItems='center' textColor='#4E4E4E'>
                 <Image src="https://truyen.tangthuvien.vn/images/logo-web-gray.png"
                 alt='name logo' title='name logo' loading='lazy' maxW='100%' h='60px' />
