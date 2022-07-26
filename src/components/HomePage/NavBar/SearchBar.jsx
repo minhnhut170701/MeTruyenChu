@@ -1,9 +1,11 @@
 import React from 'react'
-import { Box, Flex, Spacer, Image, FormControl, Input, Button, Text } from '@chakra-ui/react'
-import {AiOutlineSearch, AiFillBook} from "react-icons/ai"
+import { Box, Flex, Spacer, Image, FormControl, Input, Button, Text} from '@chakra-ui/react'
+import {AiOutlineSearch, AiFillBook, AiOutlineDownload,AiOutlineUser} from "react-icons/ai"
 const SearchBar = () => {
   return (
-    <Box w={{md: '80%', base: '100%'}} mx="auto" p="6">
+    <Box>
+        {/* desktop */}
+        <Box w={{md: '80%', base: '100%'}} display={{md:'block', base:'none'}} mx="auto" p="6">
         <Flex alignItems='center' justifyContent={{md: 'space-between'}}>
             {/* logo */}
             <Box>
@@ -26,7 +28,28 @@ const SearchBar = () => {
                <Text display={{md: 'block', base: 'none'}}>Tài Khoản</Text>
             </Button>
         </Flex>
+        </Box>
+        {/* mobile */}
+        <Box display={{md: 'none', base:'block'}} p='4'>
+            <Flex alignItems='center' justifyContent='space-between' >
+                <Flex alignItems='center'>   
+                    <Text mr='10px' fontSize='17px' fontWeight='500'>Tàng Thư Viện</Text>
+                    <Button sx={{color: 'var(--color-button-mobile)',
+                    borderColor: 'var(--color-button-mobile)'}} border='1px' bg='white' fontSize='10px' pl='4' pr='4' >Diễn Dàn</Button>
+                </Flex>
+                <Flex alignItems='center'>
+                    <Button leftIcon={<AiOutlineDownload size='20px'/>} bg="#2798A1" color="white" 
+                    fontSize='12px' mr='10px' pr='4' pl='4'>
+                        App
+                    </Button>
+                    <Text><AiOutlineUser size='20px' color='#ed424b'/></Text>
+                </Flex>
+            </Flex>
+        
+        </Box>
+       
     </Box>
+    
   )
 }
 

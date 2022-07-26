@@ -12,7 +12,7 @@ const BookUpdate = () => {
         dispatch(getDataUpdate())
     }, [dispatch])
   return (
-    <Box w='1220px' mx='auto' mt='50px'>
+    <Box w='1220px' mx='auto' mt='50px' display={{md: 'block', base:'none'}}>
        <Flex>
         {/* Top converter */}
             <Box p='3' w='20%'>
